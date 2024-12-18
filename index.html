@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Navidad 2025 - Moreno Houses</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: url('https://images.unsplash.com/photo-1549981204-57c4d8e3b0ae') no-repeat center center/cover;
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-            color: #fff;
-            text-align: center;
-        }
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            color: #fff;
-            font-size: 1em;
-            user-select: none;
-            pointer-events: none;
-            animation: snowfall linear infinite;
-        }
-        @keyframes snowfall {
-            to {
-                transform: translateY(100vh);
+    <title>Felicitación Navidad - Español</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">¡Feliz Navidad y Próspero Año Nuevo!</h1>
+            <p class="message">Te deseamos unas fiestas llenas de amor, paz y felicidad. 🎄✨</p>
+            <a href="https://www.morenohouses.com" target="_blank">
+                <img src="Logo MHRE.png" alt="Logo Moreno Houses" class="logo">
+            </a>
+            <h1 class="title">Merry Christmas and Happy New Year!</h1>
+            <p class="message">Enjoy the holidays with your loved ones! 🎄✨</p>
+        </div>
+        <div class="snowfall"></div> <!-- Área para los copos de nieve -->
+    </div>
+
+    <script>
+        // Generar copos de nieve inmediatamente al cargar el script
+        document.addEventListener('DOMContentLoaded', () => {
+            const snowfallContainer = document.querySelector('.snowfall');
+            const numSnowflakes = 50; // Número de copos de nieve
+
+            for (let i = 0; i < numSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.style.left = `${Math.random() * 100}%`; // Posición horizontal aleatoria
+                snowflake.style.animationDuration = `${3 + Math.random() * 5}s`; // Duración de la caída aleatoria
+                snowfallContainer.appendChild(snowflake);
             }
-        }
+        });
+    </script>
+
+</body>
+</html>
